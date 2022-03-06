@@ -24,6 +24,14 @@
   transition: .2s linear;
 }
 /* General Classes */
+.App{
+  min-width: 1080px;
+  margin: 0 auto;
+  /* padding: 50px; */
+}
+section{
+  padding:2rem 9%;
+}
 .btn{
   display: inline-block;
   margin-top: 1rem;
@@ -97,17 +105,10 @@ html{
 }
 
 .home{
-  padding-top: 0.5rem;
+  padding:0.5rem;
   text-align: center;
   overflow-x: hidden;
   position: relative;
-}
-.home h3{
-  color:var(--black);
-  font-size: 7.5rem;
-  text-transform: uppercase;
-  /* position: absolute;
-  left: 20%; */
 }
 .home img{
   width:100%;
@@ -121,10 +122,12 @@ html{
   border: 1px solid black;
 }
 
+
+/* Icons */
 .icons-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap:1.5rem;
+  gap:2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   background: #eee;
@@ -136,8 +139,8 @@ html{
   align-items: center;
   box-shadow: var(--box-shadow);
   border-radius: .5rem;
-  padding:2rem;
-  gap:1.5rem;
+  padding:5rem;
+  gap:2rem;
 }
 
 .icons-container .icons i{

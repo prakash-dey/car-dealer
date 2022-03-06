@@ -12,10 +12,10 @@ function Home() {
 
             </section>
 
-    <section class="icons-container">
-        {data.map(({icon,num,topic})=> <Icons icon = {icon} num ={num} topic= {topic}/>)}
-    </section>
-            </>
+            <section class="icons-container">
+                {data.map(({icon,num,topic})=> <Icons icon = {icon} num ={num} topic= {topic}/>)}
+            </section>
+         </>
             
     )
 }
