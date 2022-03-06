@@ -1,13 +1,14 @@
 import React from 'react'
 
 function Header() {
+  const login = document.querySelector("#login-btn")
   return (
     <> 
     <header class="header">
 
             <div id="menu-btn" class="fas fa-bars"></div>
 
-            <a href="#" class="logo"> <span>max</span>wheels </a>
+            <a href="#" class="logo"> <span>Car</span>Dekho </a>
 
             <nav class="navbar">
                 <a href="#home">home</a>

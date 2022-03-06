@@ -9,7 +9,7 @@ function Icons(props) {
             <p>{props.topic}</p>
         </div>
     </div>
-  )
+  ) 
 }
 
 export default Icons

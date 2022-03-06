@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Reviews() {
+function Newsletter() {
     return (
         <section class="newsletter">
 
@@ -16,4 +16,4 @@ function Reviews() {
     )
 }
 
-export default Reviews
+export default Newsletter
