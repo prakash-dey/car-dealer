@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Swiper from './components/Swiper';
 import './App.css';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -7,6 +8,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Newsletter from './components/Newsletter';
 import Services from './components/Services';
+import Vehicles from './components/Vehicles';
 
 
 
@@ -24,9 +26,11 @@ console.log(modal);
      
       <Home/>
       <Services/>
+      <Vehicles/>
       <Newsletter/>
       <Contact/>
       <Footer/>
+      
     </div>
   );
 }

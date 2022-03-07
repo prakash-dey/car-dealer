@@ -15,7 +15,7 @@ function Home() {
     return (<>
         <section className="home" id="home" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
 
-            <img src={require("../image/rolls.webp")} alt=""/>
+            <img src= "./image/rolls.webp" alt=""/>
 
             <a href="#" className="btn explore" >explore cars</a>
 

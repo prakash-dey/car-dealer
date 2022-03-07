@@ -1,23 +1,50 @@
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
-function Vehicles(props) {
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import Slide from './Slide';
+
+function Vehicles() {
+    const carImg = ['image/v1.png', '/image/v2.png', '/image/v3.png', '/image/v4.png', '/image/v5.png', '/image/v6.png'];
     return (
+        <section class="vehicles" id="vehicles">
+            <h1 class="heading"> popular <span>vehicles</span> </h1>
 
-        <div class="swiper-slide box">
-            <img src={props.img} alt="" />
-            <div class="content">
-                <h3>{props.modal}</h3>
-                <div class="price"> <span>price : </span>${props.price}/- </div>
-                <p>
-                    new
-                    <span class="fas fa-circle"></span> 2021
-                    <span class="fas fa-circle"></span> automatic
-                    <span class="fas fa-circle"></span> {props.fuel}
-                    <span class="fas fa-circle"></span> {props.speed}
-                </p>
-                <a href="#" class="btn">check out</a>
+            <div class="swiper vehicles-slider">
+                <Swiper
+                    // install Swiper modules
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={50}
+                    slidesPerView={3}
+                    // navigation
+                    pagination={{el:".swiper-pagination"},{ clickable: true }}
+                    // scrollbar={{ draggable: true }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')} className="swiper-wrapper"
+                    centeredSlides={true}
+                    loop={true}
+                    autoplay = {{delay:2000}}
+                >
+                    {carImg.map((el) => <SwiperSlide className='slide'> <Slide img={el} />
+                    </SwiperSlide>)}
+
+
+                </Swiper>
+                <div class="swiper-pagination"></div>
             </div>
-        </div>
-    )
+
+        </section>
+
+
+
+
+    );
 }
 
 export default Vehicles
