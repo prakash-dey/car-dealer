@@ -34,13 +34,13 @@ function Home() {
       </section>
 
       <section class="icons-container">
-        {data.map(({ icon, num, topic }) => (
-          <Icons icon={icon} num={num} topic={topic} />
+        {data.map(({ icon, num, topic },idx) => (
+          <Icons icon={icon} num={num} topic={topic} key={idx}/>
         ))}
       </section>
     </>
   );
 }
-// Include Key inside list
+
 
 export default Home;
