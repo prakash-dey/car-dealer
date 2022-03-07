@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Slide from './Slide';
 
-function Vehicles(props) {
+function Vehicles() {
     const carImg = ["./image/v1.png","./image/v2.png","./image/v3.png","./image/v4.png" ,"./image/v5.png", "./image/v6.png" ]
     return (
         <section class="vehicles" id="vehicles">

@@ -1,19 +1,24 @@
-import React from 'react'
+import React ,{useState}from 'react'
+
 
 function Header(props) {
+  const [active, setActive] = useState(false);
+  const [activeClass, setActiveClass] = useState(["",""]);
+
   const toggleClass=()=>{
-    document.querySelector("#menu-btn").classList.toggle('fa-times');
-    document.querySelector(".navbar").classList.toggle('active');
+// It will activate deactivate the drawer
+    setActive(!active);
+    active? setActiveClass(['fa-times','active']):setActiveClass(['','']);
   }
   return (
     <> 
     <header class="header">
 
-            <div id="menu-btn" class="fas fa-bars" onClick={toggleClass}></div>
+            <div id="menu-btn" class={`fas fa-bars ${activeClass[0]}`} onClick={toggleClass}></div>
 
             <a href="#" class="logo"> <span>Car</span>Dekho </a>
 
-            <nav class="navbar">
+            <nav class={`navbar ${activeClass[1]}`}>
                 <a href="#home">Home</a>
                 <a href="#vehicles">Vehicles</a>
                 <a href="#services">Services</a>

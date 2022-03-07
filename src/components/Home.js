@@ -1,32 +1,46 @@
-import React from 'react'
-import Icons from './Icons'
+import React,{useState} from "react";
+import Icons from "./Icons";
 
 function Home() {
-    const data = [{ icon: "fas fa-home", num: "150+", topic: "Branches" }, { icon: "fas fa-car", num: "4770+", topic: "cars sold" }, { icon: "fas fa-users", num: "320+", topic: "Happy clients" }, { icon: "fas fa-car", num: "1500+", topic: "news cars" }]
-    
-    const handleMouseEnter=()=>{
-        document.querySelector(".explore").classList.toggle("focus-btn");
-        document.querySelector(".home img").classList.toggle("focus-img");
-    }
-    const handleMouseLeave=()=>{
-        document.querySelector(".explore").classList.toggle("focus-btn");
-        document.querySelector(".home img").classList.toggle("focus-img");
-    }
-    return (<>
-        <section className="home" id="home" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+  const [data, setData] = useState([
+    { icon: "fas fa-home", num: "150+", topic: "Branches" },
+    { icon: "fas fa-car", num: "4770+", topic: "cars sold" },
+    { icon: "fas fa-users", num: "320+", topic: "Happy clients" },
+    { icon: "fas fa-car", num: "1500+", topic: "news cars" },
+  ]);
 
-            <img src= "./image/rolls.webp" alt=""/>
+  //Try to implement state functionality using hooks
+  const [active, setActive] = useState(true);
+  const [activeClass, setActiveClass] = useState(["",""]);
 
-            <a href="#" className="btn explore" >explore cars</a>
+//   This function will will handle the hovering effect
+  const handleMouse = () => {
+    setActive(!active);
+    active? setActiveClass(["focus-btn","focus-img"]):setActiveClass(["",""]);
+  };
+  return (
+    <>
+      <section
+        className="home"
+        id="home"
+        onMouseEnter={handleMouse}
+        onMouseLeave={handleMouse}
+      >
+        <img src="./image/rolls.webp" alt="" className={activeClass[1]}/>
 
-        </section> 
+        <a href="#" className={`btn explore ${activeClass[0]}`}>
+          explore cars
+        </a>
+      </section>
 
-        <section class="icons-container">
-            {data.map(({ icon, num, topic }) => <Icons icon={icon} num={num} topic={topic} />)}
-        </section>
+      <section class="icons-container">
+        {data.map(({ icon, num, topic }) => (
+          <Icons icon={icon} num={num} topic={topic} />
+        ))}
+      </section>
     </>
-
-    )
+  );
 }
+// Include Key inside list
 
-export default Home
+export default Home;
