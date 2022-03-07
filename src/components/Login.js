@@ -1,20 +1,19 @@
 import React from 'react'
-
-function Login() {
+function Login(props) {
     return (
         <>
-            <div class="login-form-container">
-                <span id="close-login-form" class="fas fa-times"></span>
+            <div className="login-form-container">
+                <span id="close-login-form" className="fas fa-times" onClick={()=>props.handler(false)} ></span>
                 <form action="">
                     <h3>user login</h3>
-                    <input type="email" placeholder="email" class="box" />
-                    <input type="password" placeholder="password" class="box" />
+                    <input type="email" placeholder="email" className="box" />
+                    <input type="password" placeholder="password" className="box" />
                     <p> forget your password <a href="#">click here</a> </p>
-                    <input type="submit" value="login" class="btn" />
+                    <input type="submit" value="login" className="btn" />
                     <p>or login with</p>
-                    <div class="buttons">
-                        <a href="#" class="btn"> google </a>
-                        <a href="#" class="btn"> facebook </a>
+                    <div className="buttons">
+                        <a href="#" className="btn"> google </a>
+                        <a href="#" className="btn"> facebook </a>
                     </div>
                     <p> don't have an account <a href="#">create one</a> </p>
 
