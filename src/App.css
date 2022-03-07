@@ -607,6 +607,9 @@ html{
   .explore{
     font-size: 2rem;
   }
+  .swiper-slide.box{
+    max-width: 90vw;
+  }
 
 }
 
@@ -619,6 +622,9 @@ html{
 
   .heading{
       font-size: 3rem;
+  }
+  .swiper-slide.box{
+    max-width: 90vw;
   }
 
 }
