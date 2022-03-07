@@ -11,11 +11,12 @@ import 'swiper/css/scrollbar';
 import Slide from './Slide';
 
 function Vehicles(props) {
-    const carImg = ["../image/v1.png","../image/v2.png","image/v3.png","image/v4.png" ,"image/v5.png", "image/v6.png" ]
+    const carImg = ["./image/v1.png","./image/v2.png","./image/v3.png","./image/v4.png" ,"./image/v5.png", "./image/v6.png" ]
     return (
         <section class="vehicles" id="vehicles">
 
             <h1 class="heading"> popular <span>vehicles</span> </h1>
+            <div class="swiper vehicles-slider">
             <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -23,15 +24,31 @@ function Vehicles(props) {
                 slidesPerView={3}
                 // navigation
                 pagination={{ clickable: true }}
+                pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                onSlideChange={() => console.log('slide change')} className="swiper-wrapper"
+                centeredSlides={true}
+                loop={true}
+                autoplay = {{delay:2000}}
+                breakpoints={{
+                    // when window width is >= 640px
+                    0: {
+                      slidesPerView: 1,
+                    },
+                    // when window width is >= 768px
+                    768: {
+                      slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                      }
+                  }}
             >
-                <SwiperSlide className='slide'> <Slide /> </SwiperSlide>
-                <SwiperSlide className='slide'> <Slide /> </SwiperSlide>
-                <SwiperSlide className='slide'> <Slide /> </SwiperSlide>
-                <SwiperSlide className='slide'> <Slide />  </SwiperSlide>
+                {carImg.map((el) => <SwiperSlide className='slide'> <Slide img={el} />
+                </SwiperSlide>)}
             </Swiper>
+            </div>
         </section>
 
 
