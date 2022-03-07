@@ -222,8 +222,8 @@ html {
   border: 1px solid black;
 }
 .focus-btn {
-  background-color: #ffee80;
-  color: #130f40;
+  background-color: var(--secondary);
+  color: #cccc;
   transform: translate(-50%, -65%);
 }
 
