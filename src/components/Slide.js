@@ -14,7 +14,7 @@ function Slide(props) {
                     <span class="fas fa-circle"></span> 2022
                     <span class="fas fa-circle"></span> automatic
                     <span class="fas fa-circle"></span> petrol
-                    <span class="fas fa-circle"></span> 250mph
+                    <span class="fas fa-circle"></span>250mph
                 </p>
                 <a href="#" class="btn">check out</a>
             </div>

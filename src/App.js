@@ -25,8 +25,8 @@ console.log(modal);
       {modal && <Login handler = {handleState}/>}
      
       <Home/>
-      <Services/>
       <Vehicles/>
+      <Services/>
       <Newsletter/>
       <Contact/>
       <Footer/>
