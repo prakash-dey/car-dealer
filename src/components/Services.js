@@ -14,7 +14,7 @@ function Services() {
             <h1 class="heading"> our services </h1>
 
             <div class="box-container">
-               {services.map(({icon,service})=><ServicesBox icon ={icon} service = {service}/>) }
+               {services.map(({icon,service},idx)=><ServicesBox icon ={icon} service = {service} key ={idx}/>) }
             </div>
 
         </section>
