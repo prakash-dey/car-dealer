@@ -3,11 +3,11 @@ import GoogleMap from "./GoogleMap"
 
 function Contact() {
   return (
-    <section class="contact" id="contact">
+    <section className="contact" id="contact">
 
-    <h1 class="heading">contact us</h1>
+    <h1 className="heading">contact us</h1>
 
-    <div class="row">
+    <div className="row">
 
         <GoogleMap/>
         <Form/>

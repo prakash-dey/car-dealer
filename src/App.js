@@ -17,7 +17,7 @@ function App() {
   console.log(modal);
 
   return (
-    <div className="App">
+    <div className = "App">
       <Header handler={handleState} />
       {modal && <Login handler={handleState} />}
 

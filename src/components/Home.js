@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Icons from "./Icons";
+import { v4 as uuidv4 } from 'uuid';
+
 
 function Home() {
     const [data, setData] = useState([
@@ -9,7 +11,6 @@ function Home() {
         { icon: "fas fa-car", num: "1500+", topic: "news cars" },
     ]);
 
-    //Try to implement state functionality using hooks
     const [active, setActive] = useState(true);
     const [activeClass, setActiveClass] = useState(["", ""]);
 
@@ -33,9 +34,9 @@ function Home() {
                 </a>
             </section>
 
-            <section class="icons-container">
+            <section className="icons-container">
                 {data.map(({ icon, num, topic }, idx) => (
-                    <Icons icon={icon} num={num} topic={topic} key={idx} />
+                    <Icons icon={icon} num={num} topic={topic} key={uuidv4()} />
                 ))}
             </section>
         </>

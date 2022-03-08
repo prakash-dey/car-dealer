@@ -2,6 +2,7 @@
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { v4 as uuidv4 } from 'uuid';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -46,7 +47,7 @@ function Vehicles() {
                         }
                     }}
                 >
-                    {carImg.map((el, idx) => <SwiperSlide className='slide'> <Slide img={el} key ={idx} />
+                    {carImg.map((el) => <SwiperSlide className='slide' key ={uuidv4()}> <Slide img={el} />
                     </SwiperSlide>)}
                 </Swiper>
             </div>

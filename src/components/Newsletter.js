@@ -2,7 +2,7 @@
 
 function Newsletter() {
     return (
-        <section class="newsletter">
+        <section className="newsletter">
 
             <h3>subscribe for latest updates</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, suscipit.</p>
